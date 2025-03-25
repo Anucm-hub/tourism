@@ -2,19 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('backbody {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('https://github.com/Anucm-hub/tourism/blob/main/background.jpg') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    text-align: center;
+    color: white;
 }
 
 header {
-    background-color: rgba(51, 51, 51, 0.8);
-    color: white;
-    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
@@ -22,125 +18,26 @@ header {
     z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+h1, h2 {
+    text-align: center;
 }
 
 .hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.attractions {
+    padding: 20px;
+    text-align: center;
     margin-top: 80px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 100px 20px;
-    font-size: 24px;
-    border-radius: 10px;
-}
-
-.attractions {
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.places {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.place {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    width: 30%;
-}
-
-.place:hover {
-    transform: scale(1.05);
-}
-
-.place img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.place p {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-footer {
-    background: rgba(51, 51, 51, 0.8);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    position: relative;
-}
-ground.jpg') no-repeat center center fixed;
-    background-size: cover;
-    text-align: center;
-}
-
-header {
-    background-color: rgba(51, 51, 51, 0.8);
-    color: white;
-    padding: 15px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.hero {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 100px 20px;
-    font-size: 24px;
-    border-radius: 10px;
-}
-
-.attractions {
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .places {
@@ -151,34 +48,39 @@ nav ul li a {
 }
 
 .place {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.place:hover {
-    transform: scale(1.05);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .place img {
     width: 100%;
-    height: auto;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .place p {
+    margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
-    margin: 10px 0;
+}
+
+.place.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
-    background: rgba(51, 51, 51, 0.8);
-    color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
