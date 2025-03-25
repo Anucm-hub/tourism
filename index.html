@@ -20,33 +20,33 @@
     
     <section class="hero">
         <h2>Discover the Beauty of Hassan</h2>
-        <img src="images/belur-temple.jpg" alt="Belur Temple">
+        <img src="images/hassan-landscape.jpg" alt="Beautiful Landscape of Hassan">
     </section>
 
     <section class="attractions">
         <h2>Top 6 Places to Visit in Hassan</h2>
         <div class="places">
-            <div class="place">
+            <div class="place" onclick="showAlert('Belur - Chennakesava Temple')">
                 <img src="images/belur-temple.jpg" alt="Belur - Chennakesava Temple">
                 <p>Belur - Chennakesava Temple</p>
             </div>
-            <div class="place">
+            <div class="place" onclick="showAlert('Halebidu - Hoysaleswara Temple')">
                 <img src="images/halebidu-temple.jpg" alt="Halebidu - Hoysaleswara Temple">
                 <p>Halebidu - Hoysaleswara Temple</p>
             </div>
-            <div class="place">
+            <div class="place" onclick="showAlert('Shravanabelagola - Bahubali Statue')">
                 <img src="images/shravanabelagola.jpg" alt="Shravanabelagola - Bahubali Statue">
                 <p>Shravanabelagola - Bahubali Statue</p>
             </div>
-            <div class="place">
+            <div class="place" onclick="showAlert('Shettihalli Church')">
                 <img src="images/shettihalli-church.jpg" alt="Shettihalli Church">
                 <p>Shettihalli Church - Ruins of a Submerged Church</p>
             </div>
-            <div class="place">
+            <div class="place" onclick="showAlert('Manjarabad Fort')">
                 <img src="images/manjarabad-fort.jpg" alt="Manjarabad Fort">
                 <p>Manjarabad Fort - Star-Shaped Fort</p>
             </div>
-            <div class="place">
+            <div class="place" onclick="showAlert('Gorur Dam')">
                 <img src="images/gorur-dam.jpg" alt="Gorur Dam">
                 <p>Gorur Dam - Scenic Reservoir</p>
             </div>
@@ -61,6 +61,10 @@
         document.addEventListener("DOMContentLoaded", function() {
             alert("Welcome to Hassan Tourism!");
         });
+
+        function showAlert(place) {
+            alert("Explore " + place + " and experience its beauty!");
+        }
     </script>
 </body>
 </html>
