@@ -20,7 +20,7 @@
     
     <section class="hero">
         <h2>Discover the Hidden Gems of Hassan</h2>
-        <img src="hassan-landscape.jpg" alt="Beautiful Landscape of Hassan">
+        <img src="background.jpg" alt="Beautiful Landscape of Hassan">
     </section>
 
     <section class="attractions" id="attractions">
@@ -46,7 +46,7 @@
             { name: "Jenukal Gudda Hill", image: "jenukal.jpg" },
             { name: "Kabbaligere Hill", image: "kabbaligerehill.jpg" },
             { name: "Koravangala Chennakeshava Temple", image: "korvagla.jpg" },
-            { name: "Lakshmi Devi Temple", image: "Lakshmi_Devi_temple,_Doddagaddavalli_Karnataka.jpg" },
+            { name: "Lakshmi Devi Temple", image: "Lakshmi_Devi_temple.jpg" },
             { name: "Mosale Hoysala Temples", image: "mosale.jpg" },
             { name: "Shettihalli Rosary Church", image: "shattihalli.jpg" },
             { name: "Sakleshpur Railway Trek", image: "sakaleshpura_railway.jpg" }
@@ -55,7 +55,7 @@
         let currentIndex = 0;
         function loadMorePlaces() {
             const container = document.getElementById("places-container");
-            for (let i = 0; i < 3 && currentIndex < places.length; i++, currentIndex++) {
+            for (let i = 0; i < 4 && currentIndex < places.length; i++, currentIndex++) {
                 let placeDiv = document.createElement("div");
                 placeDiv.classList.add("place");
                 placeDiv.innerHTML = `
@@ -67,12 +67,12 @@
         }
 
         document.addEventListener("scroll", function() {
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
                 loadMorePlaces();
             }
         });
 
-        // Load first 3 places initially
+        // Load first 4 places initially
         loadMorePlaces();
     </script>
 </body>
