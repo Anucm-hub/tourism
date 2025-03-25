@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <center></center><h1>Welcome to Hassan</h1></center>
+        <h1>Welcome to Hassan</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,13 +20,52 @@
     
     <section class="hero">
         <h2>Discover the Hidden Gems of Hassan</h2>
-        <img src="background.jpg" alt="Beautiful Landscape of Hassan">
+        <img src="hassan-landscape.jpg" alt="Beautiful Landscape of Hassan">
     </section>
 
-    <section class="attractions" id="attractions">
+    <section class="attractions">
         <h2>10 Hidden Places to Explore in Hassan</h2>
-        <div class="places" id="places-container">
-            <!-- Places will be loaded dynamically -->
+        <div class="places">
+            <div class="place" onclick="showAlert('Bisle Ghat Viewpoint')">
+                <img src="besleghat.jpg" alt="Bisle Ghat Viewpoint">
+                <p>Bisle Ghat Viewpoint</p>
+            </div>
+            <div class="place" onclick="showAlert('Gorur Dam')">
+                <img src="gorur-dam.jpg" alt="Gorur Dam">
+                <p>Gorur Dam</p>
+            </div>
+            <div class="place" onclick="showAlert('Hulikere Stepwell')">
+                <img src="hulikere.jpg" alt="Hulikere Stepwell">
+                <p>Hulikere Stepwell</p>
+            </div>
+            <div class="place" onclick="showAlert('Jenukal Gudda Hill')">
+                <img src="jenukal.jpg" alt="Jenukal Gudda Hill">
+                <p>Jenukal Gudda Hill</p>
+            </div>
+            <div class="place" onclick="showAlert('Kabbaligere Hill')">
+                <img src="kabbaligerehill.jpg" alt="Kabbaligere Hill">
+                <p>Kabbaligere Hill</p>
+            </div>
+            <div class="place" onclick="showAlert('Koravangala Chennakeshava Temple')">
+                <img src="korvagla.jpg" alt="Koravangala Temple">
+                <p>Koravangala Chennakeshava Temple</p>
+            </div>
+            <div class="place" onclick="showAlert('Lakshmi Devi Temple')">
+                <img src="Lakshmi_Devi_temple.jpg" alt="Lakshmi Devi Temple">
+                <p>Lakshmi Devi Temple</p>
+            </div>
+            <div class="place" onclick="showAlert('Mosale Hoysala Temples')">
+                <img src="mosale.jpg" alt="Mosale Hoysala Temples">
+                <p>Mosale Hoysala Temples</p>
+            </div>
+            <div class="place" onclick="showAlert('Shettihalli Rosary Church')">
+                <img src="shattihalli.jpg" alt="Shettihalli Rosary Church">
+                <p>Shettihalli Rosary Church</p>
+            </div>
+            <div class="place" onclick="showAlert('Sakleshpur Railway Trek')">
+                <img src="sakaleshpura_railway.jpg" alt="Sakleshpur Railway Trek">
+                <p>Sakleshpur Railway Trek</p>
+            </div>
         </div>
     </section>
 
@@ -39,41 +78,9 @@
             alert("Welcome to Hassan Tourism!");
         });
 
-        const places = [
-            { name: "Bisle Ghat Viewpoint", image: "besleghat.jpg" },
-            { name: "Gorur Dam", image: "gorur-dam.jpg" },
-            { name: "Hulikere Stepwell", image: "hulikere.jpg" },
-            { name: "Jenukal Gudda Hill", image: "jenukal.jpg" },
-            { name: "Kabbaligere Hill", image: "kabbaligerehill.jpg" },
-            { name: "Koravangala Chennakeshava Temple", image: "korvagla.jpg" },
-            { name: "Lakshmi Devi Temple", image: "Lakshmi_Devi_temple.jpg" },
-            { name: "Mosale Hoysala Temples", image: "mosale.jpg" },
-            { name: "Shettihalli Rosary Church", image: "shattihalli.jpg" },
-            { name: "Sakleshpur Railway Trek", image: "sakaleshpura_railway.jpg" }
-        ];
-
-        let currentIndex = 0;
-        function loadMorePlaces() {
-            const container = document.getElementById("places-container");
-            for (let i = 0; i < 4 && currentIndex < places.length; i++, currentIndex++) {
-                let placeDiv = document.createElement("div");
-                placeDiv.classList.add("place");
-                placeDiv.innerHTML = `
-                    <img src="${places[currentIndex].image}" alt="${places[currentIndex].name}">
-                    <p>${places[currentIndex].name}</p>
-                `;
-                container.appendChild(placeDiv);
-            }
+        function showAlert(place) {
+            alert("Explore " + place + " and experience its beauty!");
         }
-
-        document.addEventListener("scroll", function() {
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
-                loadMorePlaces();
-            }
-        });
-
-        // Load first 4 places initially
-        loadMorePlaces();
     </script>
 </body>
 </html>
